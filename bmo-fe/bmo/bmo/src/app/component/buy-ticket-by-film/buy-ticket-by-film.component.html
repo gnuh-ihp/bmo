@@ -1,0 +1,41 @@
+<!--
+<div class="row">
+  <div></div>
+</div>
+<ul>
+  <li *ngFor="let movie of movies | async">
+    {{movie.name}}
+  </li>
+</ul> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <ul>
+        <p><b>Select film</b>
+      </ul>
+      <ul>
+        <li *ngFor="let movie of movies | async">
+          <a href="#"> {{movie.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul>
+        <p><b>Select cinema</b>
+      </ul>
+      <ul>
+        <p> One of three columns</p>
+      </ul>
+
+    </div>
+    <div class="col-md-4">
+      <ul>
+        <p><b>Select quality</b>
+      </ul>
+      <ul>
+        <p> One of three columns</p>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @ComponentScan("com.hunglp.bmo")
 @SpringBootApplication(exclude = { MongoAutoConfiguration.class, MongoDataAutoConfiguration.class })
-@EnableMongoRepositories(basePackages = "com.hunglp.bmo.dao")
+@EnableMongoRepositories(basePackages = "com.hunglp.bmo.repository")
 public class BmoApplication {
 
 	public static void main(String[] args) {

@@ -1,0 +1,32 @@
+<h3>Update Movie</h3>
+<div >
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="movie.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Description</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="movie.description" name="description">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Running Time </label>
+      <input type="text" class="form-control" id="running_time" required [(ngModel)]="movie.runningTime" name="running_time">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Producer</label>
+      <input type="text" class="form-control" id="producer" required [(ngModel)]="movie.producer" name="producer">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Directors</label>
+      <input type="text" class="form-control" id="director" required [(ngModel)]="movie.directors" name="director">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

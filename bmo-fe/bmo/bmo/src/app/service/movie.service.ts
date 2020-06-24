@@ -5,30 +5,31 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+export class MovieService {
 
-export class EmployeeService {
-  private baseUrl = 'http://localhost:8080/bmo/api/v1/employees';
+  private baseUrl = 'http://localhost:8080/bmo/api/v1/movies';
 
   constructor(private http: HttpClient) { }
 
-  getEmployee(id: number): Observable<any> {
+  getMovie(id: string): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createEmployee(employee: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, employee);
+  // tslint:disable-next-line: ban-types
+  createMovie(movie: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, movie);
   }
 
-  updateEmployee(id: number, value: any): Observable<Object> {
+  // tslint:disable-next-line: ban-types
+  updateMovie(id: string, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  deleteEmployee(id: number): Observable<any> {
-    this.http.options.prototype
+  deleteMovie(id: string): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
 
-  getEmployeesList(): Observable<any> {
+  getListMovie(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
 }

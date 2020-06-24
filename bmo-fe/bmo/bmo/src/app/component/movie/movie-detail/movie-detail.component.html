@@ -1,0 +1,25 @@
+<h2>Employee Details</h2>
+
+<hr/>
+<div *ngIf="movie">
+  <div>
+    <label><b>Name: </b></label> {{movie.name}}
+  </div>
+  <div>
+    <label><b>Running Time: </b></label> {{movie.runningTime}}
+  </div>
+  <div>
+    <label><b>Description </b></label> {{movie.description}}
+  </div>
+  <div>
+    <label><b>Producer </b></label> {{movie.producer}}
+  </div>
+
+  <div>
+    <label><b>Directors </b></label> {{movie.directors}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>
